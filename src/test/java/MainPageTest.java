@@ -23,7 +23,7 @@ public class MainPageTest {
 
         if (osName.contains("Mac")) {
             System.setProperty("webdriver.chrome.driver"
-                    , "/Users/dzb/Downloads/chromedriver");
+                    , "/Users/dzb/IdeaProjects/pageobjectselenium/drivers/chromedriver");
 
             System.setProperty("selenium.browser", "Chrome");
 
