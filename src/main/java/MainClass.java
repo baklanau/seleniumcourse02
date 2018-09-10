@@ -1,9 +1,13 @@
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.PageFactory;
+import pages.MainPage;
 
 public class MainClass {
+
+    static WebDriver driver;
     public static void main(String[] args) {
-        WebDriver driver;
+        //WebDriver driver;
 
         String osName = System.getProperty("os.name");
 
@@ -28,5 +32,13 @@ public class MainClass {
         driver = new ChromeDriver();
 
         driver.get("http://github.com");
+
+        //MainPage mainPage = new MainPage(driver);
+
+        MainPage mainPage = PageFactory.initElements(driver, MainPage.class);
+
+        mainPage.register("testUserName", "testEmail@email.org", "testPassword");
+
+        driver.quit();
     }
 }
