@@ -28,7 +28,7 @@ public class MainPageTest {
             System.setProperty("selenium.browser", "Chrome");
 
         } else if (osName.contains("Win")) {
-            System.setProperty("phantomjs.binary.path"
+            System.setProperty("webdriver.chrome.driver"
                     , "C:\\Users\\Dmitry B\\IdeaProjects\\testselenium\\drivers\\chromedriver.exe");
 
             System.setProperty("selenium.browser", "Chrome");
